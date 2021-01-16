@@ -1,0 +1,3 @@
+1,Copa Piston,2021-01-05,2021-06-05,8,true
+4,Liga Mena 2,2021-02-14,2021-07-08,16,true
+12,Copa Jr. Magdalena,2021-03-09,2021-12-25,32,true
