@@ -8,6 +8,8 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
+import static ec.edu.epn.g12.Soporte.Ficheros.muestraContenido;
+
 public class InscripcionTorneo {
 
     ArrayList<Torneo> ListaTorneos = new ArrayList<>();
@@ -161,18 +163,7 @@ public class InscripcionTorneo {
         return ListaParticipante.get(numeroPart).getNombre();
     }
 
-    File fichero;
-    public ArrayList<String> muestraContenido(String archivo) throws FileNotFoundException, IOException {
-        String Linea;
-        ArrayList <String> Lineas = new ArrayList();
-        FileReader f = new FileReader(archivo);
-        BufferedReader b = new BufferedReader(f);
-        while((Linea = b.readLine())!=null) {
-            Lineas.add(Linea);
-            //System.out.println(Linea);
-        }
-        b.close();
-        return Lineas;
-    }
+
+
 
 }
