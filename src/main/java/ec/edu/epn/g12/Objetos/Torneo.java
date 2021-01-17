@@ -14,26 +14,21 @@ public class Torneo {
     private int numeroInscritos;
     private boolean colectivo;
 
-    public void imprimirTorneo(){
+    public void imprimirTorneo(boolean adicional){
         System.out.println("\t----Torneo-----");
         System.out.println("\tCodigoDeporte: "+codigoDeporte);
         System.out.println("\tNombre: "+nombre);
         System.out.println("\tFecha Inicio: "+fechaInicio.get(Calendar.YEAR)+"-"+fechaInicio.get(Calendar.MONTH)+"-"+fechaInicio.get(Calendar.DAY_OF_MONTH));
         System.out.println("\tFecha Fin: "+fechaFin.get(Calendar.YEAR)+"-"+fechaFin.get(Calendar.MONTH)+"-"+fechaFin.get(Calendar.DAY_OF_MONTH));
-        System.out.println("\tNumero de Contendientes: "+numeroContendientes);
-        System.out.println("\tNumero de Partidos Por Fecha: "+numPartidosPorFecha);
-        System.out.println("\tNumero de Fechas Por Semana: "+numFechaPorSemana);
-        System.out.println("\tNumero de Inscritos: "+numeroInscritos);
-        System.out.println("\tColectivo: "+colectivo);
+        if (adicional) {
+            System.out.println("\tNumero de Contendientes: " + numeroContendientes);
+            System.out.println("\tNumero de Partidos Por Fecha: " + numPartidosPorFecha);
+            System.out.println("\tNumero de Fechas Por Semana: " + numFechaPorSemana);
+            System.out.println("\tNumero de Inscritos: " + numeroInscritos);
+            System.out.println("\tColectivo: " + colectivo);
+        }
+    }
 
-    }
-    public void imprimirTorneoReducido(){
-        System.out.println("\t----Torneo-----");
-        System.out.println("\tCodigoDeporte: "+codigoDeporte);
-        System.out.println("\tNombre: "+nombre);
-        System.out.println("\tFecha Inicio: "+fechaInicio.get(Calendar.YEAR)+"-"+fechaInicio.get(Calendar.MONTH)+"-"+fechaInicio.get(Calendar.DAY_OF_MONTH));
-        System.out.println("\tFecha Fin: "+fechaFin.get(Calendar.YEAR)+"-"+fechaFin.get(Calendar.MONTH)+"-"+fechaFin.get(Calendar.DAY_OF_MONTH));
-    }
 
 
 

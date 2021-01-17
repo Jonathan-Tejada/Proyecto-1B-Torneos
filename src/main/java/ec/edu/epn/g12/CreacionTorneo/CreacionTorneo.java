@@ -34,7 +34,7 @@ public class CreacionTorneo {
     public String definirTorneo(Torneo torneoRecibido) {
          if (validarTorneo(torneoRecibido)) {
              torneoDescrito = torneoRecibido;
-             torneoRecibido.imprimirTorneo();
+             torneoRecibido.imprimirTorneo(true);
              return torneoDescrito.getNombre();
          }
         return null;

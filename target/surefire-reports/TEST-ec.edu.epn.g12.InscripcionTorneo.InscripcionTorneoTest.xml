@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="ec.edu.epn.g12.InscripcionTorneo.InscripcionTorneoTest" time="0.044" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="ec.edu.epn.g12.InscripcionTorneo.InscripcionTorneoTest" time="0.034" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2020.3.1"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -63,10 +63,10 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="ec.edu.epn.g12.InscripcionTorneo.InscripcionTorneoTest" name="given_false_when_consultarParticipantes_then_ok" time="0.005"/>
-  <testcase classname="ec.edu.epn.g12.InscripcionTorneo.InscripcionTorneoTest" name="given_identificador_when_seleccionarParticipante_then_ok" time="0.005"/>
-  <testcase classname="ec.edu.epn.g12.InscripcionTorneo.InscripcionTorneoTest" name="given_a_non_registered_sport_when_consultarTorneos_then_ok" time="0.016"/>
-  <testcase classname="ec.edu.epn.g12.InscripcionTorneo.InscripcionTorneoTest" name="given_an_integer_when_seleccionarParticipante_then_exception" time="0.003"/>
-  <testcase classname="ec.edu.epn.g12.InscripcionTorneo.InscripcionTorneoTest" name="given_a_boolean_when_consultarParticipantes_then_ok" time="0.008"/>
-  <testcase classname="ec.edu.epn.g12.InscripcionTorneo.InscripcionTorneoTest" name="given_identificador_when_seleccionarParticipante_then_error" time="0.007"/>
+  <testcase classname="ec.edu.epn.g12.InscripcionTorneo.InscripcionTorneoTest" name="given_false_when_consultarParticipantes_then_ok" time="0"/>
+  <testcase classname="ec.edu.epn.g12.InscripcionTorneo.InscripcionTorneoTest" name="given_identificador_when_seleccionarParticipante_then_ok" time="0.001"/>
+  <testcase classname="ec.edu.epn.g12.InscripcionTorneo.InscripcionTorneoTest" name="given_a_non_registered_sport_when_consultarTorneos_then_ok" time="0.015"/>
+  <testcase classname="ec.edu.epn.g12.InscripcionTorneo.InscripcionTorneoTest" name="given_an_integer_when_seleccionarParticipante_then_exception" time="0.004"/>
+  <testcase classname="ec.edu.epn.g12.InscripcionTorneo.InscripcionTorneoTest" name="given_a_boolean_when_consultarParticipantes_then_ok" time="0.01"/>
+  <testcase classname="ec.edu.epn.g12.InscripcionTorneo.InscripcionTorneoTest" name="given_identificador_when_seleccionarParticipante_then_error" time="0.004"/>
 </testsuite>

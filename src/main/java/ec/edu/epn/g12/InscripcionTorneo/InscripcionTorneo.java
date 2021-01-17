@@ -33,7 +33,7 @@ public class InscripcionTorneo {
                 for (Torneo objTorneo:ListaTorneos) {
                     if(objTorneo.getCodigoDeporte()==objDeporte.getCodigo()){
                         ListaTorneosPorDeporte.add(objTorneo);
-                        objTorneo.imprimirTorneoReducido();
+                        objTorneo.imprimirTorneo(false);
                     }
                 }
             }
@@ -46,7 +46,7 @@ public class InscripcionTorneo {
         for (Torneo objTorneo:ListaTorneosPorDeporte) {
             if (objTorneo.getNombre().equals(nombre)){
                 System.out.println("----Torneo Seleccionado----");
-                objTorneo.imprimirTorneoReducido();
+                objTorneo.imprimirTorneo(false);
                return objTorneo;
             }
 
