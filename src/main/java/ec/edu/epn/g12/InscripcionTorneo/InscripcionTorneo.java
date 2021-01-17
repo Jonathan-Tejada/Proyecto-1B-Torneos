@@ -8,7 +8,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
-import static ec.edu.epn.g12.Soporte.Ficheros.muestraContenido;
+import static ec.edu.epn.g12.Soporte.Ficheros.extraerContenidoDeFichero;
 
 public class InscripcionTorneo {
 
@@ -71,41 +71,24 @@ public class InscripcionTorneo {
     public InscripcionTorneo() {
         obtenerTorneosBDD();
         obtenerParticipantesBDD();
-        obtenerDeportesBDD();
-
+        Deporte Dpt = new Deporte();
+        ListaDeporte= Dpt.obtenerDeportesBDD();
         consultarObjParticipantes(true);
 
         System.out.println("Simulacion de conexion con base de datos terminada exitosamente");
 
     }
 
-    private void obtenerDeportesBDD() {
-        ArrayList<String> auxi = new ArrayList<>();
-        try {
-            auxi = muestraContenido("src/main/resources/deportes.txt");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
-        for (String linea:auxi) {
-            String[] palabras= linea.split(" ");
-            Deporte objDeporte= new Deporte();
-            objDeporte.setCodigo(Integer.parseInt(palabras[0]));
-            objDeporte.setNombre(palabras[1]);
-            objDeporte.setSexo(palabras[2]);
-            objDeporte.setCategoria(palabras[3]);
-            ListaDeporte.add(objDeporte);
-        }
-    }
 
     private void obtenerParticipantesBDD() {
-        ArrayList<String> auxi = new ArrayList<>();
+        ArrayList<String> contenido = new ArrayList<>();
         try {
-            auxi = muestraContenido("src/main/resources/participantes.txt");
+            contenido = extraerContenidoDeFichero("src/main/resources/participantes.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
-        for (String linea:auxi) {
+        for (String linea:contenido) {
             String[] palabras= linea.split(",");
 
             Participante objParticipante= new Participante();
@@ -122,14 +105,14 @@ public class InscripcionTorneo {
     }
 
     private void obtenerTorneosBDD() {
-        ArrayList<String> auxi = new ArrayList<>();
+        ArrayList<String> contenido = new ArrayList<>();
 
         try {
-            auxi = muestraContenido("src/main/resources/torneos.txt");
+            contenido = extraerContenidoDeFichero("src/main/resources/torneos.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
-        for (String linea:auxi) {
+        for (String linea:contenido) {
             String[] palabras= linea.split(",");
             Torneo objTorneo= new Torneo();
             objTorneo.setCodigoDeporte(Integer.parseInt(palabras[0]));

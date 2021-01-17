@@ -1,15 +1,12 @@
 package ec.edu.epn.g12.GestionUsuario;
 
 
-import ec.edu.epn.g12.Objetos.Participante;
 import ec.edu.epn.g12.Objetos.Usuario;
-import ec.edu.epn.g12.Soporte.Ficheros;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.GregorianCalendar;
 
-import static ec.edu.epn.g12.Soporte.Ficheros.muestraContenido;
+import static ec.edu.epn.g12.Soporte.Ficheros.extraerContenidoDeFichero;
 
 public class GestorDeUsuarios {
 
@@ -20,13 +17,13 @@ public class GestorDeUsuarios {
     }
 
     public void obtenerUsuarios(){
-        ArrayList<String> auxi = new ArrayList<>();
+        ArrayList<String> contenido = new ArrayList<>();
         try {
-            auxi = muestraContenido("src/main/resources/usuario.txt");
+            contenido = extraerContenidoDeFichero("src/main/resources/usuario.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
-        for (String linea:auxi) {
+        for (String linea:contenido) {
             String[] palabras= linea.split(",");
             Usuario objUsuario = new Usuario();
             objUsuario.setUsuario(palabras[0]);

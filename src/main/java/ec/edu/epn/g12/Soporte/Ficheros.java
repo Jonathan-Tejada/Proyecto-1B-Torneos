@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public abstract class Ficheros {
     File fichero;
-    public static ArrayList muestraContenido(String archivo) throws FileNotFoundException, IOException {
+    public static ArrayList extraerContenidoDeFichero(String archivo) throws FileNotFoundException, IOException {
         String Linea;
         ArrayList <String> Lineas = new ArrayList();
         FileReader f = new FileReader(archivo);
