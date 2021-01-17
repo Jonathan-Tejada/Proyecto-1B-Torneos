@@ -32,13 +32,15 @@ public class GestorDeUsuarios {
         }
     }
 
-    public boolean ingresoUsuario(Usuario UsuarioIngresado) {
+    public boolean validarUsuario(Usuario UsuarioIngresado) {
         for (Usuario usr: ListaUsuarios) {
             if (usr.getUsuario().equals(UsuarioIngresado.getUsuario()) &&
             usr.getPassword().equals(UsuarioIngresado.getPassword())) {
+                System.out.println("Inicio de sesion exitoso");
                 return true;
             }
         }
+        System.out.println("Credenciales Incorrectas");
         return false;
     }
 

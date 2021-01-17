@@ -13,7 +13,7 @@ public class GestorDeUsuariosTest {
         Usuario user = new Usuario();
         user.setUsuario("Luchoxtu");
         user.setPassword("pasw896");
-        assertTrue(gu.ingresoUsuario(user));
+        assertTrue(gu.validarUsuario(user));
     }
 
 }

@@ -56,12 +56,11 @@ public class InscripcionTorneo {
     }
 
     public void consultarObjParticipantes(boolean isCollective){
-        System.out.println("Lista de participantes de deportes colectivos");
         ArrayList<Participante> listaNombres=new ArrayList<>();
         for (Participante participante:ListaParticipante) {
             if (participante.isEquipo()==isCollective){
                 listaNombres.add(participante);
-                participante.imprimirParticipante();
+
             }
         }
 
@@ -74,8 +73,6 @@ public class InscripcionTorneo {
         Deporte Dpt = new Deporte();
         ListaDeporte= Dpt.obtenerDeportesBDD();
         consultarObjParticipantes(true);
-
-        System.out.println("Simulacion de conexion con base de datos terminada exitosamente");
 
     }
 
