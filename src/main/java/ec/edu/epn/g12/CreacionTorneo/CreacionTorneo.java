@@ -12,10 +12,10 @@ import static ec.edu.epn.g12.Soporte.Ficheros.extraerContenidoDeFichero;
 
 public class CreacionTorneo {
 
-    ArrayList<Deporte> ListaDeporte= new ArrayList<>();
-    Deporte deporteEscogido = new Deporte();
-    Torneo torneoDescrito = new Torneo();
-    Tenis tenisDescrito = new Tenis();
+    public ArrayList<Deporte> ListaDeporte= new ArrayList<>();
+    public Deporte deporteEscogido = new Deporte();
+    public Torneo torneoDescrito = new Torneo();
+    public Tenis tenisDescrito = new Tenis();
 
         public CreacionTorneo() {
             Deporte Dpt = new Deporte();
@@ -27,6 +27,7 @@ public class CreacionTorneo {
             for (Deporte objDeporte: ListaDeporte) {
                 if (objDeporte.getCodigo()==idDeporte) {
                     deporteEscogido=objDeporte;
+                    objDeporte.imprimirDeporte();
                     return objDeporte.getNombre();
                 }
             }
@@ -36,18 +37,27 @@ public class CreacionTorneo {
     public String definirTorneo(Torneo torneoRecibido) {
          if (validarTorneo(torneoRecibido)) {
              torneoDescrito = torneoRecibido;
+             torneoRecibido.imprimirTorneo();
              return torneoDescrito.getNombre();
          }
         return null;
     }
 
-    public String definirReglas(Deporte deporteRecibido) {
+    public String definirReglas(Deporte deporteRecibido,String Opcion) {
         switch (deporteRecibido.getNombre()) {
             case "Tenis":
-                Tenis auxi = new Tenis();
-                auxi.Tenis("");
-                Tenis objTenis = definirTenis(auxi);
+                if (Opcion.equals("Default")){
+                    Tenis auxi = new Tenis();
+                    auxi.Tenis("");
+                    Tenis objTenis = definirTenis(auxi);
+                    objTenis.ImprimirTenis();
                 return "OK";
+                }
+                else if (Opcion.equals("Personalizados")){
+                    System.out.println("Ingresar los datos Personalizados");
+                    //TODO desarrollar ingreso personalizado de parametros;
+                }
+
             case "Futbol":
                 //TODO añadir clase Futbol
             case "Ajedrez":
@@ -58,6 +68,8 @@ public class CreacionTorneo {
     }
 
     public Tenis definirTenis(Tenis tenisRecibido){
+            //TODO validar Tenis
+
             tenisDescrito=tenisRecibido;
             return tenisDescrito;
     }

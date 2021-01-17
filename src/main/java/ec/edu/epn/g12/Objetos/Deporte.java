@@ -12,6 +12,16 @@ public class Deporte {
     private String sexo;
     private String categoria;
 
+    public void imprimirDeporte(){
+        System.out.println("\t---Deporte---");
+        System.out.println("\tCodigo: "+this.codigo);
+        System.out.println("\tNombre: "+this.nombre);
+        System.out.println("\tSexo: "+this.sexo);
+        System.out.println("\tCategoria: "+this.categoria);
+
+    }
+
+
     public ArrayList<Deporte> obtenerDeportesBDD() {
 
         ArrayList<Deporte> ListaDeporte = new ArrayList<>();

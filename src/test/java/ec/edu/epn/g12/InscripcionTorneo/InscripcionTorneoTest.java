@@ -1,5 +1,7 @@
 package ec.edu.epn.g12.InscripcionTorneo;
 
+import com.sun.org.apache.xpath.internal.objects.XObject;
+import ec.edu.epn.g12.Objetos.Torneo;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -17,17 +19,6 @@ public class InscripcionTorneoTest {
 
     }
 
-    @Test
-    public void given_a_sport_when_consultarTorneos_then_ok(){
-        System.out.println("Test 1");
-        assertArrayEquals(new Object[]{"Copa Piston","Liga Mena 2"},it.consultarTorneo("Futbol"));
-    }
-
-    @Test(timeout=50)
-    public void given_a_sport_when_consultarTorneos_then_timeout_50(){
-        System.out.println("Test 2");
-        assertArrayEquals(new Object[]{"Copa Piston","Liga Mena 2"},it.consultarTorneo("Futbol"));
-    }
 
     @Test
     public void given_a_non_registered_sport_when_consultarTorneos_then_ok(){

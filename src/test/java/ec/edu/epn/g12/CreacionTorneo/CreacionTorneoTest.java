@@ -21,7 +21,7 @@ public class CreacionTorneoTest {
         d.setNombre("Badminton");
         d.setSexo("Mixto");
         d.setCategoria("U-20");
-        assertNull(c.definirReglas(d));
+        assertNull(c.definirReglas(d,"Default"));
     }
 
 }

@@ -10,11 +10,11 @@ public class Tenis {
     private int numSaquesFallidosPerdidaPuntos;
     private int puntosPorPartidoGanado;
     private int puntosPorPartidoPerdido;
-    private int numeroDeJugadoresInscritos;
+    private int numeroJugadoresPorEquipo;
 
     public void Tenis(String uso){
         this.numAvisosParaSancion=3;
-        this.numeroDeJugadoresInscritos=1;
+        this.numeroJugadoresPorEquipo =1;
         this.numJuegosDesempate=3;
         this.numJuegosPorSet=6;
         this.numSaquesFallidosPerdidaPuntos=2;
@@ -35,7 +35,7 @@ public class Tenis {
         System.out.println("\tNumero de saques fallidos hasta perdida de puntos:\t "+numSaquesFallidosPerdidaPuntos);
         System.out.println("\tNumero de Puntos por partido ganado:\t  "+puntosPorPartidoGanado);
         System.out.println("\tNumero de Puntos por partido perdido:\t "+puntosPorPartidoPerdido);
-        System.out.println("\tNumero de Jugadores Inscritos:\t "+numeroDeJugadoresInscritos);
+        System.out.println("\tNumero de Jugadores permitidos por equipo:\t "+ numeroJugadoresPorEquipo);
     }
 
 
@@ -112,11 +112,11 @@ public class Tenis {
         this.puntosPorPartidoPerdido = puntosPorPartidoPerdido;
     }
 
-    public int getNumeroDeJugadoresInscritos() {
-        return numeroDeJugadoresInscritos;
+    public int getNumeroJugadoresPorEquipo() {
+        return numeroJugadoresPorEquipo;
     }
 
-    public void setNumeroDeJugadoresInscritos(int numeroDeJugadoresInscritos) {
-        this.numeroDeJugadoresInscritos = numeroDeJugadoresInscritos;
+    public void setNumeroJugadoresPorEquipo(int numeroJugadoresPorEquipo) {
+        this.numeroJugadoresPorEquipo = numeroJugadoresPorEquipo;
     }
 }

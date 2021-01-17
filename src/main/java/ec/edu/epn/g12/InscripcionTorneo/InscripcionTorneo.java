@@ -13,35 +13,52 @@ import static ec.edu.epn.g12.Soporte.Ficheros.extraerContenidoDeFichero;
 public class InscripcionTorneo {
 
     ArrayList<Torneo> ListaTorneos = new ArrayList<>();
+    ArrayList<Torneo> ListaTorneosPorDeporte = new ArrayList<>();
     ArrayList<Participante> ListaParticipante= new ArrayList<>();
     ArrayList<Deporte> ListaDeporte= new ArrayList<>();
     ArrayList<Participante> SubListaParticipante = new ArrayList<>();
-    Participante participanteEscogido = new Participante();
+    public Participante participanteEscogido = new Participante();
+
 
     public Object[] consultarTorneo(String deporte){
         try {
-            Thread.sleep(25);
+            Thread.sleep(15);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        ArrayList<String> Torneos =new ArrayList<>();
+
         for (Deporte objDeporte:ListaDeporte) {
 
             if (objDeporte.getNombre().equals(deporte)){
                 for (Torneo objTorneo:ListaTorneos) {
                     if(objTorneo.getCodigoDeporte()==objDeporte.getCodigo()){
-                        Torneos.add(objTorneo.getNombre());
-
-
+                        ListaTorneosPorDeporte.add(objTorneo);
+                        objTorneo.imprimirTorneoReducido();
                     }
                 }
             }
 
         }
+        return ListaTorneosPorDeporte.toArray().length == 0 ? null : ListaTorneosPorDeporte.toArray();
+    }
 
-        return Torneos.toArray().length == 0 ? null : Torneos.toArray();
+    public Torneo selleccionarToneo(String nombre){
+        for (Torneo objTorneo:ListaTorneosPorDeporte) {
+            if (objTorneo.getNombre().equals(nombre)){
+                System.out.println("----Torneo Seleccionado----");
+                objTorneo.imprimirTorneoReducido();
+               return objTorneo;
+            }
+
+        }
+
+        return null;
+
+
 
     }
+
+
     public Object[] consultarParticipantes(boolean isCollective){
         ArrayList<String> listaNombres=new ArrayList<>();
         for (Participante participante:ListaParticipante) {
@@ -60,6 +77,7 @@ public class InscripcionTorneo {
         for (Participante participante:ListaParticipante) {
             if (participante.isEquipo()==isCollective){
                 listaNombres.add(participante);
+                participante.imprimirParticipante();
 
             }
         }
@@ -130,6 +148,7 @@ public class InscripcionTorneo {
         for (Participante part : SubListaParticipante) {
             if (part.getIdentificacion().equals(strIdentidicador) ){
                 participanteEscogido=part;
+                participanteEscogido.imprimirParticipante();
                 return part.getNombre();
 
             }
@@ -137,6 +156,10 @@ public class InscripcionTorneo {
         }
         participanteEscogido=null;
         return null;
+    }
+
+    public void inscribirPartipante(Participante participante,Torneo torneo){
+        System.out.println("Participante "+participante.getNombre()+" se ha inscrito en el torneo "+torneo.getNombre());
     }
 
     public String seleccionarParticipante(int numeroPart){
