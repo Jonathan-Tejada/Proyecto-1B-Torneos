@@ -1,0 +1,5 @@
+true,1,Tornado,-,2020-01-12,M,-
+false,1750702068,Jonathan,Tejada,2005-03-09,M,1
+true,2,Niupi,-,2019-02-21,F,-
+false,1750702088,Maria,Sparrow,1964-05-09,F,0
+true,3,Fenix,-,2018-03-21,X,-

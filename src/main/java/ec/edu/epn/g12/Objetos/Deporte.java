@@ -1,4 +1,4 @@
-package ec.edu.epn.g12.InscripcionTorneo;
+package ec.edu.epn.g12.Objetos;
 
 
 public class Deporte {

@@ -1,12 +1,16 @@
 package ec.edu.epn.g12.InscripcionTorneo;
 
+import ec.edu.epn.g12.Objetos.Deporte;
+import ec.edu.epn.g12.Objetos.Participante;
+import ec.edu.epn.g12.Objetos.Torneo;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
 public class InscripcionTorneo {
 
-    ArrayList<TorneoBean> ListaTorneos = new ArrayList<>();
+    ArrayList<Torneo> ListaTorneos = new ArrayList<>();
     ArrayList<Participante> ListaParticipante= new ArrayList<>();
     ArrayList<Deporte> ListaDeporte= new ArrayList<>();
     ArrayList<Participante> SubListaParticipante = new ArrayList<>();
@@ -22,7 +26,7 @@ public class InscripcionTorneo {
         for (Deporte objDeporte:ListaDeporte) {
 
             if (objDeporte.getNombre().equals(deporte)){
-                for (TorneoBean objTorneo:ListaTorneos) {
+                for (Torneo objTorneo:ListaTorneos) {
                     if(objTorneo.getCodigoDeporte()==objDeporte.getCodigo()){
                         Torneos.add(objTorneo.getNombre());
 
@@ -125,7 +129,7 @@ public class InscripcionTorneo {
         }
         for (String linea:auxi) {
             String[] palabras= linea.split(",");
-            TorneoBean objTorneo= new TorneoBean();
+            Torneo objTorneo= new Torneo();
             objTorneo.setCodigoDeporte(Integer.parseInt(palabras[0]));
             objTorneo.setNombre(palabras[1]);
             String[] fecha= palabras[2].split("-");

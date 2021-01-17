@@ -1,15 +1,16 @@
-package ec.edu.epn.g12.InscripcionTorneo;
-
-
+package ec.edu.epn.g12.Objetos;
 
 import java.util.GregorianCalendar;
 
-public class TorneoBean {
+public class Torneo {
     private int codigoDeporte;
     private String nombre;
     private GregorianCalendar fechaInicio;
     private GregorianCalendar fechaFin;
     private int numeroContendientes;
+    private int numPartidosPorFecha;
+    private int numFechaPorSemana;
+    private int numeroInscritos;
     private boolean colectivo;
 
 
@@ -62,6 +63,30 @@ public class TorneoBean {
 
     public void setColectivo(boolean colectivo) {
         this.colectivo = colectivo;
+    }
+
+    public int getNumPartidosPorFecha() {
+        return numPartidosPorFecha;
+    }
+
+    public void setNumPartidosPorFecha(int numPartidosPorFecha) {
+        this.numPartidosPorFecha = numPartidosPorFecha;
+    }
+
+    public int getNumFechaPorSemana() {
+        return numFechaPorSemana;
+    }
+
+    public void setNumFechaPorSemana(int numFechaPorSemana) {
+        this.numFechaPorSemana = numFechaPorSemana;
+    }
+
+    public int getNumeroInscritos() {
+        return numeroInscritos;
+    }
+
+    public void setNumeroInscritos(int numeroInscritos) {
+        this.numeroInscritos = numeroInscritos;
     }
 }
 
