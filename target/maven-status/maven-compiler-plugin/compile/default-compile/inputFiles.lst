@@ -5,7 +5,7 @@
 /home/jonathan/IdeaProjects/Proyecto-1B-Torneos/src/main/java/ec/edu/epn/g12/GestionUsuario/GestorDeUsuarios.java
 /home/jonathan/IdeaProjects/Proyecto-1B-Torneos/src/main/java/ec/edu/epn/g12/Objetos/Participante.java
 /home/jonathan/IdeaProjects/Proyecto-1B-Torneos/src/main/java/ec/edu/epn/g12/CreacionTorneo/CreacionTorneo.java
-/home/jonathan/IdeaProjects/Proyecto-1B-Torneos/src/main/java/ec/edu/epn/g12/Soporte/Ficheros.java
+/home/jonathan/IdeaProjects/Proyecto-1B-Torneos/src/main/java/ec/edu/epn/g12/Soporte/CargaDeDatos.java
 /home/jonathan/IdeaProjects/Proyecto-1B-Torneos/src/main/java/ec/edu/epn/g12/Objetos/Torneo.java
 /home/jonathan/IdeaProjects/Proyecto-1B-Torneos/src/main/java/ec/edu/epn/g12/Objetos/Tenis.java
 /home/jonathan/IdeaProjects/Proyecto-1B-Torneos/src/main/java/ec/edu/epn/g12/Objetos/Deporte.java

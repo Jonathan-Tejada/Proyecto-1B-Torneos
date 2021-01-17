@@ -4,11 +4,8 @@ import ec.edu.epn.g12.Objetos.Deporte;
 import ec.edu.epn.g12.Objetos.Torneo;
 import ec.edu.epn.g12.Objetos.Tenis;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
-
-import static ec.edu.epn.g12.Soporte.Ficheros.extraerContenidoDeFichero;
 
 public class CreacionTorneo {
 

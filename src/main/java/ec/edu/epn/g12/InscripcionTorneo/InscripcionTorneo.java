@@ -8,7 +8,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
-import static ec.edu.epn.g12.Soporte.Ficheros.extraerContenidoDeFichero;
+import static ec.edu.epn.g12.Soporte.CargaDeDatos.extraerContenidoBDD;
 
 public class InscripcionTorneo {
 
@@ -98,11 +98,9 @@ public class InscripcionTorneo {
 
     private void obtenerParticipantesBDD() {
         ArrayList<String> contenido = new ArrayList<>();
-        try {
-            contenido = extraerContenidoDeFichero("src/main/resources/participantes.txt");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+            contenido = extraerContenidoBDD("participantes");
+
         for (String linea:contenido) {
             String[] palabras= linea.split(",");
 
@@ -122,11 +120,9 @@ public class InscripcionTorneo {
     private void obtenerTorneosBDD() {
         ArrayList<String> contenido = new ArrayList<>();
 
-        try {
-            contenido = extraerContenidoDeFichero("src/main/resources/torneos.txt");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+            contenido = extraerContenidoBDD("torneos");
+
         for (String linea:contenido) {
             String[] palabras= linea.split(",");
             Torneo objTorneo= new Torneo();

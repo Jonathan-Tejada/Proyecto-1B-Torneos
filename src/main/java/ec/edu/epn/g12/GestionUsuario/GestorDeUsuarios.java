@@ -6,7 +6,7 @@ import ec.edu.epn.g12.Objetos.Usuario;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static ec.edu.epn.g12.Soporte.Ficheros.extraerContenidoDeFichero;
+import static ec.edu.epn.g12.Soporte.CargaDeDatos.extraerContenidoBDD;
 
 public class GestorDeUsuarios {
 
@@ -18,11 +18,9 @@ public class GestorDeUsuarios {
 
     public void obtenerUsuarios(){
         ArrayList<String> contenido = new ArrayList<>();
-        try {
-            contenido = extraerContenidoDeFichero("src/main/resources/usuario.txt");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+        contenido = extraerContenidoBDD("usuario");
+
         for (String linea:contenido) {
             String[] palabras= linea.split(",");
             Usuario objUsuario = new Usuario();

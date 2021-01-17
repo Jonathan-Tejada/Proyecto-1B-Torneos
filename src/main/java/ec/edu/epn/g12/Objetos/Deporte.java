@@ -1,10 +1,10 @@
 package ec.edu.epn.g12.Objetos;
 
 
-import java.io.IOException;
+
 import java.util.ArrayList;
 
-import static ec.edu.epn.g12.Soporte.Ficheros.extraerContenidoDeFichero;
+import static ec.edu.epn.g12.Soporte.CargaDeDatos.extraerContenidoBDD;
 
 public class Deporte {
     private int codigo ;
@@ -25,12 +25,10 @@ public class Deporte {
     public ArrayList<Deporte> obtenerDeportesBDD() {
 
         ArrayList<Deporte> ListaDeporte = new ArrayList<>();
-        ArrayList<String> contenido = new ArrayList<>();
-        try {
-            contenido = extraerContenidoDeFichero("src/main/resources/deportes.txt");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        ArrayList<String> contenido;
+
+            contenido = extraerContenidoBDD("deportes");
+
 
         for (String linea:contenido) {
             String[] palabras= linea.split(" ");

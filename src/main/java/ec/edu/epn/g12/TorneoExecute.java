@@ -30,7 +30,7 @@ public class TorneoExecute {
         Deporte=CT.seleccionarDeporte(5);
         System.out.println("CT.seleccionarDeporte(5)= "+Deporte);
         System.out.println("  ");
-        Thread.sleep(500);
+        //Thread.sleep(500);
 
         System.out.println("Definir parametros del torneo");
         Torneo objTorneo= new Torneo();
@@ -47,12 +47,12 @@ public class TorneoExecute {
         System.out.println("CT.definirTorneo(objTorneo)");
 
         System.out.println("  ");
-        Thread.sleep(500);
+        //Thread.sleep(500);
         System.out.println("Definir reglas del deporte escogido previamente ("+CT.deporteEscogido.getNombre()+")");
         CT.definirReglas(CT.deporteEscogido,"Default");
         System.out.println("CT.definirReglas(CT.deporteEscogido,''Default'')");
         System.out.println("  ");
-        Thread.sleep(500);
+        //Thread.sleep(500);
 
         System.out.println("Seleccione el deporte al que se desea inscribir");
         InscripcionTorneo IT= new InscripcionTorneo();
@@ -60,7 +60,7 @@ public class TorneoExecute {
         IT.consultarTorneo(Deporte);
         System.out.println("IT.consultarTorneo(Deporte)----Deporte="+Deporte);
         System.out.println("  ");
-        Thread.sleep(500);
+        //Thread.sleep(500);
 
 
 
@@ -70,7 +70,7 @@ public class TorneoExecute {
         objTorneoSeleccionado= IT.selleccionarToneo("Copa Jr. Magdalena");
 
         System.out.println("  ");
-        Thread.sleep(500);
+        //Thread.sleep(500);
 
 
 
@@ -78,21 +78,18 @@ public class TorneoExecute {
         IT.consultarObjParticipantes(objTorneoSeleccionado.isColectivo());
 
         System.out.println("  ");
-        Thread.sleep(500);
+       // Thread.sleep(500);
 
         System.out.println("Seleccione el participante");
         IT.seleccionarParticipante("1750702068");
 
         System.out.println("  ");
-        Thread.sleep(500);
+        //Thread.sleep(500);
 
         System.out.println("Confirmar Inscripcion");
         IT.inscribirPartipante(IT.participanteEscogido,objTorneoSeleccionado);
 
         System.out.println("Inscripcion Confirmada");
-
-
-
 
 
     }

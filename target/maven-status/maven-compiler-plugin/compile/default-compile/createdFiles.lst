@@ -1,10 +1,10 @@
+ec/edu/epn/g12/Soporte/CargaDeDatos.class
 ec/edu/epn/g12/InscripcionTorneo/InscripcionTorneo.class
 ec/edu/epn/g12/GestionUsuario/GestorDeUsuarios.class
 ec/edu/epn/g12/CreacionTorneo/CreacionTorneo.class
 ec/edu/epn/g12/Objetos/Participante.class
 ec/edu/epn/g12/Objetos/Deporte.class
 ec/edu/epn/g12/TorneoExecute.class
-ec/edu/epn/g12/Soporte/Ficheros.class
 ec/edu/epn/g12/InscripcionTorneo/iInscripcionTorneo.class
 ec/edu/epn/g12/Objetos/Tenis.class
 ec/edu/epn/g12/Objetos/Torneo.class
