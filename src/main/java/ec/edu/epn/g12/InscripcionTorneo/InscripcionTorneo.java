@@ -6,6 +6,7 @@ import ec.edu.epn.g12.Objetos.Torneo;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 import static ec.edu.epn.g12.Soporte.CargaDeDatos.extraerContenidoBDD;
@@ -155,9 +156,27 @@ public class InscripcionTorneo {
     }
 
     public void inscribirPartipante(Participante participante,Torneo torneo){
-        System.out.println("Participante "+participante.getNombre()+" se ha inscrito en el torneo "+torneo.getNombre());
+        boolean valido;
+        System.out.println("Valindando Usuario...");
+        if (validarParticipanteConTorneo(participante,torneo))
+            System.out.println("Participante "+participante.getNombre()+" se ha inscrito en el torneo "+torneo.getNombre());
+        
     }
-
+    public boolean validarParticipanteConTorneo(Participante participante,Torneo torneo){
+        for (Deporte dep:ListaDeporte) {
+            if (dep.getCodigo()==torneo.getCodigoDeporte()){
+               String[] cat=dep.getCategoria().split("-");
+               int edad = participante.getFecha().get(Calendar.YEAR);
+               edad= (new GregorianCalendar().get(Calendar.YEAR))-edad;
+               if (Integer.parseInt(cat[1])>=edad){
+                   System.out.println("Usuario válido!");
+                   return true;
+               }
+            }
+        }
+        System.out.println("Usuario NO válido!");
+        return false;
+    }
     public String seleccionarParticipante(int numeroPart){
         return ListaParticipante.get(numeroPart).getNombre();
     }
